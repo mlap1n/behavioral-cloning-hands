@@ -1,0 +1,18 @@
+<mujoco model="empty_table">
+    <include file="world_descr/empty_table/asset.xml"></include>
+    <worldbody>
+        <geom name="floor0" pos="0. 0. -0.14493" size="3 3 .125" type="plane" condim="3" material="floorplane"></geom>
+
+        <light directional="true" ambient="0.2 0.2 0.2" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" castshadow="false" pos="0 0 4" dir="0 0 -1" name="light0"></light>
+
+        <!-- camera: front view -->
+        <camera mode="fixed" name="frontview" pos="3.0 0 1.85" quat="0.56 0.43 0.43 0.56"/>
+
+        <!-- Table -->
+        <body pos="0.8 0 0.3" name="table0">
+            <geom size="0.5 0.5 0.2" type="box" mass="2000" material="table_mat"></geom>
+            <geom size="0.5 0.5 0.2" type="box" mass="2000" group="1" material="table_mat"></geom>
+        </body>
+        <include file="robots/fetch_dual/robot.xml"></include>
+    </worldbody>
+</mujoco>
